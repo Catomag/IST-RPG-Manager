@@ -1,8 +1,6 @@
 {
-	"items" : {
-		"banana" : {
-			"description" : "A yellow elongated, edible fruit that is botanically a berry...",
-			"type" : "consumable"
-		}
+	"banana" : {
+		"description" : "A yellow elongated, edible fruit that is botanically a berry...",
+		"type" : "consumable"
 	}
 }

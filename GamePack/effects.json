@@ -1,7 +1,5 @@
 {
-	"effects" : {
-		"regen" : {
-			"description" : "makes player regenerate and stuff",
-		}
+	"regen" : {
+		"description" : "makes player regenerate and stuff",
 	}
 }

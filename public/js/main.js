@@ -8,19 +8,24 @@ async function getPackFile(file) {
 }
 
 async function start() {
-	var test = JSON.parse(await getPackFile('items'));
+	var test = Object.entries(JSON.parse(await getPackFile('items')));
 
-	for(var key in test) {
-		if (test.hasOwnProperty(key)) {
-			console.log(key + " -> " + test[key]);
-		}
-	}
+	makeDiv(test);
 }
 
 function makeDiv(data) {
-	/*var div = document.createElement("div");
+	var div = document.createElement("div");
 	document.body.appendChild(div);
 
+	var ol = document.createElement("ol");
 
-	div.appendChild();*/
+	div.appendChild(ol);
+
+	console.log(data);
+
+	for(obj in data[0][1]) {
+		var field = document.createElement("li");
+		field.innerHTML = obj;
+		ol.appendChild(field);
+	}
 }
