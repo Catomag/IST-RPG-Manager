@@ -2,11 +2,26 @@ html, body {
 	padding: 0px;
 	margin: 0px;
 	font-size: 100px;
+
+	background-color: black;
+	color: white;
 }
 
 .dark {
-
 	color: white;
 	background-color: black;
+}
 
+.rainbow {
+	background-color: green;
+	animation-name: rainbow-background;
+	animation-duration: 10s;
+}
+
+
+@keyframes rainbow-background {
+	0%   {background-color: red;}
+	25%  {background-color: yellow;}
+	50%  {background-color: blue;}
+	100% {background-color: green;}
 }

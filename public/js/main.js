@@ -16,6 +16,7 @@ async function start() {
 function makeDiv(data) {
 	var div = document.createElement("div");
 	document.body.appendChild(div);
+	div.classList.add('rainbow');
 
 	var ol = document.createElement("ol");
 
@@ -23,9 +24,14 @@ function makeDiv(data) {
 
 	console.log(data);
 
-	for(obj in data[0][1]) {
-		var field = document.createElement("li");
-		field.innerHTML = obj;
-		ol.appendChild(field);
+	var field = document.createElement("li");
+	field.innerHTML = '<b>name</b>: ' + data[0][0];
+	ol.appendChild(field);
+
+	var field = document.createElement("li");
+	field.innerHTML = '<b>description</b>: ' + data[0][1].description;
+	ol.appendChild(field);
+
+	for(obj in data) {
 	}
 }

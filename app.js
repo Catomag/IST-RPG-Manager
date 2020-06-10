@@ -57,6 +57,18 @@ app.get('/', (req, res) => {
 	res.render('test.pug');
 });
 
+
+app.get('/iconpack/:type/:iconname', (req, res) => {
+	var data = fs.readFileSync('GamePack/Icons/' + req.params.type + '/' + req.params.iconname);
+
+	console.log('sending:');
+	console.log(data);
+
+	res.set('Content-Type', 'image/png');
+	res.send(data);
+});
+
+
 app.post('/gamepack/:type', (req, res) => {
 	console.log('User requesting file: ' + req.params.type + '.json');
 	var data = fs.readFileSync('GamePack/' + req.params.type + '.json').toString();
